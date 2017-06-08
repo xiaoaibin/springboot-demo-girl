@@ -61,6 +61,6 @@ public class HttpAspect {
 
     @AfterReturning(returning = "object", pointcut = "log()")
     public void doAfterRuturning(Object object){ // 获取请求后返回的参数
-        logger.info("response={}", object);
+        logger.info("response={}", object.toString());
     }
 }

@@ -3,7 +3,9 @@ package com.aibinxiao.domain;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.Valid;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 /**
  * Created by aibin on 2017/6/5.
@@ -14,6 +16,9 @@ public class Girl {
     @GeneratedValue
     private Integer id;
     private String cupSize;
+
+    @NotNull(message = "金额不能为空")
+    private Integer money;
 
     @Min(value = 18, message = "未成年少年禁止入内")
     private Integer age;
@@ -42,6 +47,14 @@ public class Girl {
         this.age = age;
     }
 
+    public Integer getMoney() {
+        return money;
+    }
+
+    public void setMoney(Integer money) {
+        this.money = money;
+    }
+
     public Girl() {
     }
 
@@ -50,6 +63,7 @@ public class Girl {
         return "Girl{" +
                 "id=" + id +
                 ", cupSize='" + cupSize + '\'' +
+                ", money=" + money +
                 ", age=" + age +
                 '}';
     }
