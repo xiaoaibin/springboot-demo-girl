@@ -1,4 +1,4 @@
-package com.aibinxiao;
+package com.aibinxiao.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

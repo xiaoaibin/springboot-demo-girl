@@ -1,5 +1,6 @@
-package com.aibinxiao;
+package com.aibinxiao.repository;
 
+import com.aibinxiao.domain.Girl;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
