@@ -33,6 +33,11 @@ public class GirlService {
     }
 
 
+    /**
+     * 统一异常处理
+     * @param id
+     * @throws Exception
+     */
     public void getAge(Integer id) throws Exception{
         Girl girl = girlRepository.findOne(id);
         Integer age = girl.getAge();
@@ -45,5 +50,14 @@ public class GirlService {
             //throw new GirlException(101, "你可能在上初中");
             throw new GirlException(ResultEnum.MIDDLE_SCHOOL);
         }
+    }
+
+    /**
+     * 根据id查询一个女生的信息
+     * @param id
+     * @return
+     */
+    public Girl findOne(Integer id){
+        return girlRepository.findOne(id);
     }
 }
